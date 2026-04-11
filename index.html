@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara | 个人主页</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+        }
+
+        .lang-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 12px;
+            border: 1px solid #333;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #333;
+            margin: 20px auto;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 40px 20px;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button class="lang-btn" onclick="toggleLanguage()" id="langToggle">EN</button>
+
+        <h1 id="name">Yara</h1>
+        <h2 id="title">四川大学 | 汉语国际教育研究生</h2>
+        <div class="divider"></div>
+
+        <p id="p1">
+            你好！我是Yara，目前就读于四川大学汉语国际教育专业。
+            我的研究兴趣包括汉语词汇教学、近义词辨析以及对外汉语教学方法。
+        </p>
+
+        <p id="p2">
+            欢迎与我交流学术问题或合作研究。
+        </p>
+
+        <div class="footer" id="footer">
+            © 2026 Yara
+        </div>
+    </div>
+
+    <script>
+        let isChinese = true;
+
+        function toggleLanguage() {
+            if (isChinese) {
+                document.getElementById("title").innerText = "Sichuan University | MA in Teaching Chinese to Speakers of Other Languages";
+                document.getElementById("p1").innerText = "Hello! I'm Yara, currently a graduate student at Sichuan University majoring in Teaching Chinese to Speakers of Other Languages. My research interests include Chinese vocabulary teaching, synonym differentiation, and pedagogy in teaching Chinese as a foreign language.";
+                document.getElementById("p2").innerText = "Feel free to reach out for academic discussion or collaboration.";
+                document.getElementById("langToggle").innerText = "中";
+                isChinese = false;
+            } else {
+                document.getElementById("title").innerText = "四川大学 | 汉语国际教育研究生";
+                document.getElementById("p1").innerText = "你好！我是Yara，目前就读于四川大学汉语国际教育专业。我的研究兴趣包括汉语词汇教学、近义词辨析以及对外汉语教学方法。";
+                document.getElementById("p2").innerText = "欢迎与我交流学术问题或合作研究。";
+                document.getElementById("langToggle").innerText = "EN";
+                isChinese = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
