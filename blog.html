@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara | 博客</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .back-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 15px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .back-link:hover {
+            border-bottom-color: #333;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid #333;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0 0 8px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #333;
+            margin: 0 auto 32px;
+        }
+
+        .post-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post-list li {
+            border-bottom: 1px solid #eee;
+            padding: 18px 0;
+        }
+
+        .post-list li:first-child {
+            padding-top: 0;
+        }
+
+        .post-list a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+
+        .post-list a:hover .post-title {
+            text-decoration: underline;
+        }
+
+        .post-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .post-meta {
+            display: block;
+            font-size: 13px;
+            color: #999;
+            margin-top: 6px;
+        }
+
+        .post-excerpt {
+            font-size: 15px;
+            color: #666;
+            margin-top: 8px;
+            line-height: 1.7;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 40px 20px;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top-bar">
+            <a class="back-link" href="index.html" id="backLink">← 返回主页</a>
+            <button class="lang-btn" type="button" onclick="toggleLanguage()" id="langToggle">EN</button>
+        </div>
+
+        <h1 id="pageTitle">博客</h1>
+        <p class="subtitle" id="subtitle">读书、教学与研究的随笔与备忘。</p>
+        <div class="divider"></div>
+
+        <ul class="post-list" id="postList">
+            <li>
+                <a href="posts/welcome.html">
+                    <span class="post-title" data-zh="欢迎来到我的博客" data-en="Welcome to my blog">欢迎来到我的博客</span>
+                    <span class="post-meta">2026-04-11</span>
+                    <span class="post-excerpt" data-zh="个人主页新增博客板块，后续会在这里更新文章。" data-en="The site now has a blog section; posts will appear here over time.">个人主页新增博客板块，后续会在这里更新文章。</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer" id="footer">© 2026 Yara</div>
+    </div>
+
+    <script>
+        let isChinese = true;
+
+        function applyLang() {
+            document.getElementById("pageTitle").innerText = isChinese ? "博客" : "Blog";
+            document.getElementById("subtitle").innerText = isChinese
+                ? "读书、教学与研究的随笔与备忘。"
+                : "Notes on reading, teaching, and research.";
+            document.getElementById("backLink").innerText = isChinese ? "← 返回主页" : "← Home";
+            document.getElementById("langToggle").innerText = isChinese ? "EN" : "中";
+
+            document.querySelectorAll("[data-zh][data-en]").forEach(function (el) {
+                el.innerText = isChinese ? el.getAttribute("data-zh") : el.getAttribute("data-en");
+            });
+        }
+
+        function toggleLanguage() {
+            isChinese = !isChinese;
+            applyLang();
+        }
+    </script>
+
+</body>
+</html>
