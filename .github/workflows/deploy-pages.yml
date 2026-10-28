@@ -1,0 +1,65 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v7
+        with:
+          path: YaraHe.github.io
+          persist-credentials: false
+
+      - name: Checkout learning notes
+        uses: actions/checkout@v7
+        with:
+          repository: YaraHe/basic_learn
+          ref: main
+          path: basic_learn
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: YaraHe.github.io/package-lock.json
+
+      - name: Install, build, and check
+        working-directory: YaraHe.github.io
+        run: |
+          npm ci
+          npm run build
+          npm run check
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: YaraHe.github.io/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

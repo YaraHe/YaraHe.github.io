@@ -1,0 +1,64 @@
+:root { --paper: #faf9f5; --ink: #191b1b; --muted: #777c83; --blue: #315d85; --cn: "STSong", "Songti SC", "Noto Serif CJK SC", "SimSun", serif; --en: Georgia, "Times New Roman", serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+figure, h1, h2, p { margin: 0; }
+img { display: block; }
+.page { width: min(100%, 1672px); margin: auto; padding: 0; background: radial-gradient(circle at 52% 47%, #fffefa 0%, var(--paper) 78%); }
+.page-head { display: flex; align-items: center; gap: 1.6%; height: clamp(36px, 3.5vw, 59px); padding: 0 3.65%; color: #777b83; font: clamp(13px, 1.05vw, 17px)/1.2 var(--en); letter-spacing: .045em; }
+.page-head i { height: 1px; flex: 1; background: #d1d5d8; }
+.spread { position: relative; width: 100%; height: max(690px, 56.3cqw); min-height: 0; container-type: inline-size; isolation: isolate; }
+.opening { position: absolute; left: 3.8%; top: 3.7cqw; z-index: 3; width: 31%; }
+.eyebrow { color: #667e96; font: clamp(10px, .78cqw, 13px)/1.3 var(--en); letter-spacing: .27em; white-space: nowrap; }
+.opening h1 { margin-top: 1.35cqw; font: 400 clamp(36px, 3.25cqw, 54px)/1.2 var(--cn); letter-spacing: -.065em; white-space: nowrap; }
+.lead { margin-top: 1.4cqw; color: #526f90; font: clamp(13px, 1.02cqw, 17px)/1.7 var(--cn); letter-spacing: .03em; white-space: nowrap; }
+.main-composition { position: absolute; z-index: 3; left: 35.3%; top: 0; width: 44.3%; pointer-events: none; }
+.main-composition img { width: 100%; height: auto; }
+.connectors { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.connectors path { fill: none; stroke: #567ea5; stroke-width: 1.1; stroke-dasharray: 3 5; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.connectors circle { fill: #315d85; }
+.connector-right-compact { display: none; }
+.feature { position: absolute; z-index: 5; }
+.feature-word { left: 5%; top: 28.2cqw; width: 25.1%; }
+.feature-next { left: 78.7%; top: 9.2cqw; width: 18.7%; }
+.detail { overflow: hidden; padding: .55cqw; border: 1px solid #deded9; border-radius: .9cqw; background: #fffefa; box-shadow: 0 .5cqw 1.5cqw rgba(43, 44, 39, .1); }
+.crop { position: relative; overflow: hidden; border-radius: .55cqw; background: #f4efe3; }
+.crop img { position: absolute; left: 0; width: 100%; height: auto; max-width: none; }
+.detail-word .crop { aspect-ratio: 420 / 180; }
+.crop-word img { top: -241%; }
+.detail-next .crop { aspect-ratio: 320 / 315; }
+.crop-next img { top: -69%; }
+.feature-index { margin-top: 1.6cqw; color: var(--blue); font: clamp(10px, .8cqw, 13px)/1.35 var(--en); letter-spacing: .2em; }
+.feature h2 { margin-top: .7cqw; font: 400 clamp(22px, 1.8cqw, 30px)/1.27 var(--cn); letter-spacing: -.04em; white-space: nowrap; }
+.feature-next h2 { font-size: clamp(22px, 1.75cqw, 29px); }
+.feature > p:last-child { margin-top: .9cqw; color: #52708e; font: clamp(13px, 1.05cqw, 18px)/1.62 var(--cn); letter-spacing: .02em; }
+.feature-next .feature-index { margin-top: 1.3cqw; }
+@media (max-width: 1100px) and (min-width: 801px) {
+  .opening h1 { font-size: 3.25cqw; }
+  .lead { font-size: 1.13cqw; }
+  .feature h2 { font-size: 1.72cqw; }
+  .feature > p:last-child { font-size: 1.1cqw; }
+  .connectors { height: 56.3cqw; }
+  .connector-right-wide { display: none; }
+  .connector-right-compact { display: block; }
+}
+@media (max-width: 800px) {
+  .page { padding-bottom: 52px; }
+  .page-head { height: 50px; padding: 0 20px; }
+  .spread { display: flex; flex-direction: column; align-items: center; gap: 28px; height: auto; padding: 30px 20px 0; }
+  .opening, .main-composition, .feature { position: relative; inset: auto; width: min(100%, 440px); }
+  .opening { align-self: start; }
+  .eyebrow { font-size: 11px; white-space: normal; }
+  .opening h1 { margin-top: 19px; font-size: clamp(38px, 7.5vw, 60px); }
+  .lead { margin-top: 20px; font-size: 16px; white-space: normal; }
+  .lead br { display: none; }
+  .main-composition { order: 2; }
+  .feature-word { order: 3; }
+  .feature-next { order: 4; }
+  .detail { padding: 7px; border-radius: 11px; }
+  .crop { border-radius: 7px; }
+  .feature-index { margin-top: 18px; font-size: 12px; }
+  .feature h2 { margin-top: 10px; font-size: clamp(25px, 6vw, 33px); white-space: normal; }
+  .feature > p:last-child { margin-top: 12px; font-size: 16px; }
+  .connectors { display: none; }
+  .feature .detail { border-left: 1px dashed #7796ad; }
+}

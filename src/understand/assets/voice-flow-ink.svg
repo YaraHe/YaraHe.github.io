@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1774 887" fill="none">
+  <!-- The separate high-resolution image supplies the paper, tape, and clip. This is pen work only. -->
+  <g stroke="#87a4ba" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The title sits directly on the generated blue paper tape. -->
+    <g fill="#405871" stroke="none">
+      <text x="262" y="230" transform="rotate(-10 262 230)"><tspan font-family="Caveat, cursive" font-size="52">Voice Agent </tspan><tspan font-family="STKaiti, KaiTi, serif" font-size="39">工作流程</tspan></text>
+    </g>
+
+    <g transform="translate(0 -45)">
+    <!-- Memory and tools exchange context and tool results with dialogue management. -->
+    <path d="M753 285 Q748 283 747 291 L750 373 Q750 379 757 379 Q878 382 1023 378 Q1031 377 1030 370 L1027 288 Q1026 283 1019 284 Q882 280 753 285Z" fill="#fcfcf9" fill-opacity=".28"/>
+    <g transform="translate(775 302)">
+      <path d="M7 9 Q25 -1 49 8 Q54 11 49 15 Q26 26 7 15 Q2 12 7 9Z M5 13 Q7 31 6 43 Q27 53 50 43 L51 12 M6 29 Q29 39 51 29" stroke-width="2.45"/>
+    </g>
+    <g fill="#41586d" stroke="none" font-family="STKaiti, KaiTi, serif" text-anchor="middle">
+      <text x="935" y="324" font-size="34" transform="rotate(-1 935 324)">记忆 / 工具</text>
+      <text x="935" y="356" font-size="35" font-family="Caveat, cursive" fill="#586f82" transform="rotate(1 935 356)">Memory / Tools</text>
+    </g>
+    <path d="M862 404 Q861 430 860 455 M853 445 L860 455 L867 444"/>
+    <path d="M886 457 Q887 432 884 405 M878 415 L884 405 L891 416"/>
+
+    <!-- User speech: an open human profile with outward sound waves. -->
+    <g stroke-width="2.45">
+      <path d="M301 564 Q287 552 284 532 Q281 510 295 492 Q306 478 325 477 Q346 475 360 489 Q368 498 369 510 L368 526 L379 537 L367 543 L364 554 Q362 564 347 569 Q342 570 336 570"/>
+      <path d="M364 505 Q378 517 368 539 M374 497 Q393 517 378 550 M386 490 Q410 520 388 559" stroke-width="2.25"/>
+    </g>
+
+    <!-- Speech recognition. -->
+    <path d="M479 471 Q472 469 473 477 L475 561 Q475 568 482 568 Q534 570 588 567 Q594 565 594 558 L592 476 Q591 469 584 470 Q530 467 479 471Z" fill="#fcfcf9" fill-opacity=".22"/>
+    <path d="M491 521 l7-1 M505 508 q-1 13 0 26 M513 496 q2 25 1 46 M521 510 l-1 21 M528 491 q1 31 0 55 M536 485 q-2 34 0 68 M544 507 l1 25 M552 497 q1 23 0 45 M560 511 l1 18 M568 505 l0 30 M576 516 l5-1" stroke-width="2.45"/>
+
+    <!-- Dialogue manager, with a deliberately hand-drawn brain/conversation icon. -->
+    <path d="M737 468 Q731 466 731 475 L733 579 Q734 586 742 586 Q809 589 873 585 Q880 584 880 576 L878 473 Q877 466 870 467 Q800 464 737 468Z" fill="#fcfcf9" fill-opacity=".24"/>
+    <path d="M804 493 Q794 484 783 491 Q771 497 774 508 Q761 510 763 526 Q763 536 771 541 Q766 553 778 560 Q787 566 796 558 Q800 565 806 560 Q811 558 810 550 L808 501 Q808 496 804 493Z"/>
+    <path d="M809 493 Q820 484 831 492 Q840 498 837 508 Q851 510 850 526 Q851 536 841 541 Q845 553 834 560 Q826 566 816 557 Q813 564 808 560 M807 495 Q807 529 809 559"/>
+    <path d="M782 503 Q792 505 793 517 M777 525 Q789 523 790 537 M834 503 Q824 506 823 519 M842 525 Q831 523 828 537 M801 515 Q795 519 798 529 M816 512 Q820 519 816 526" stroke-width="2.1"/>
+
+    <!-- Speech synthesis. -->
+    <path d="M1013 471 Q1007 470 1007 477 L1009 562 Q1010 568 1017 568 Q1067 570 1122 568 Q1128 566 1128 559 L1126 475 Q1125 468 1118 470 Q1067 467 1013 471Z" fill="#fcfcf9" fill-opacity=".22"/>
+    <path d="M1025 520 l7-1 M1039 508 q-1 13 0 26 M1047 496 q2 25 1 46 M1055 510 l-1 21 M1062 491 q1 31 0 55 M1070 485 q-2 34 0 68 M1078 507 l1 25 M1086 497 q1 23 0 45 M1094 511 l1 18 M1102 505 l0 30 M1110 516 l5-1" stroke-width="2.45"/>
+
+    <!-- Spoken response and sound waves. -->
+    <path d="M1226 506 Q1240 506 1255 507 L1284 482 Q1285 523 1282 560 L1255 536 Q1240 536 1226 535Z"/>
+    <path d="M1298 495 Q1313 516 1298 545 M1309 484 Q1334 520 1310 558" stroke-width="2.35"/>
+
+    <path d="M400 522 Q424 516 449 521 M439 515 L449 521 L439 527"/>
+    <path d="M614 521 Q653 517 697 522 M686 515 L697 522 L686 528"/>
+    <path d="M902 521 Q941 518 981 522 M970 515 L981 522 L970 528"/>
+    <path d="M1148 522 Q1174 518 1202 521 M1191 515 L1202 521 L1191 527"/>
+
+    <g fill="#40566b" stroke="none" font-family="STKaiti, KaiTi, serif" text-anchor="middle">
+      <text x="319" y="616" font-size="35" transform="rotate(-1.2 319 616)">用户语音</text>
+      <text x="534" y="617" font-size="35" transform="rotate(.7 534 617)">语音识别</text>
+      <text x="807" y="617" font-size="33" transform="rotate(-.6 807 617)">LLM / 对话管理</text>
+      <text x="1068" y="616" font-size="35" transform="rotate(.9 1068 616)">语音合成</text>
+      <text x="1264" y="617" font-size="35" transform="rotate(-1 1264 617)">语音回复</text>
+    </g>
+    <g fill="#566e82" stroke="none" font-family="Caveat, cursive" text-anchor="middle" font-size="35">
+      <text x="319" y="649" transform="rotate(-2 319 649)">User Speech</text>
+      <text x="534" y="649" transform="rotate(1 534 649)">ASR</text>
+      <text x="807" y="649" transform="rotate(-1 807 649)">Dialogue Manager</text>
+      <text x="1067" y="649" transform="rotate(2 1067 649)">TTS</text>
+      <text x="1265" y="650" transform="rotate(-1 1265 650)">Spoken Response</text>
+    </g>
+
+    <!-- Real-time interruption coordinates incoming speech, dialogue state and playback. -->
+    <path d="M318 675 Q321 731 461 747 Q560 760 688 751" stroke-width="2.5" stroke-dasharray="9 11 13 9 7 12"/>
+    <path d="M904 750 Q1084 765 1196 733 Q1253 716 1262 676" stroke-width="2.5" stroke-dasharray="9 12 13 8 7 11"/>
+    <path d="M806 704 Q805 687 807 668" stroke-width="2.35" stroke-dasharray="7 9 5 8"/>
+    <path d="M311 686 L318 675 L325 687 M1255 687 L1262 675 L1268 688 M801 678 L807 667 L813 678" stroke-width="2.4"/>
+    <g fill="#40566b" stroke="none" font-family="STKaiti, KaiTi, serif" text-anchor="middle">
+      <text x="806" y="738" font-size="33" transform="rotate(-.4 806 738)">实时对话 / 打断处理</text>
+      <text x="806" y="770" font-size="33" font-family="Caveat, cursive" fill="#566e82" transform="rotate(.7 806 770)">Real-time &amp; Interruption</text>
+    </g>
+    </g>
+  </g>
+
+  <!-- Writing belongs to the separate right-hand note, not to the processing chain. -->
+  <g fill="#777873" font-family="'Nothing You Could Do', Caveat, cursive" font-weight="400">
+    <text x="1401" y="278" font-size="49" transform="rotate(-7 1401 278)">Speech</text>
+    <text x="1414" y="340" font-size="47" transform="rotate(2 1414 340)">ASR</text>
+    <text x="1398" y="399" font-size="50" transform="rotate(-5 1398 399)">LLM</text>
+    <text x="1410" y="462" font-size="47" transform="rotate(3 1410 462)">TTS</text>
+    <text x="1396" y="524" font-size="49" transform="rotate(-4 1396 524)">Memory</text>
+    <text x="1407" y="583" font-size="48" transform="rotate(1 1407 583)">Dialogue</text>
+    <text x="1395" y="638" font-size="47" transform="rotate(-5 1395 638)">Real-time</text>
+  </g>
+  <g fill="#627f9b" font-family="'Nothing You Could Do', Caveat, cursive" font-size="43" font-weight="400">
+    <text x="1415" y="685" transform="rotate(-8 1415 685)">From</text>
+    <text x="1424" y="740" transform="rotate(-6 1424 740)">Voice to</text>
+    <text x="1358" y="791" font-size="40" transform="rotate(-8 1358 791)">Real-world Actions</text>
+  </g>
+</svg>

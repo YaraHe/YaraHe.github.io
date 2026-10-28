@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1774 887" fill="none">
+  <!-- The shared high-resolution paper collage supplies the tape, fibers, torn edges, and clip. -->
+  <text x="264" y="228" fill="#405871" transform="rotate(-10 264 228)"><tspan font-family="Caveat, cursive" font-size="53">Agent </tspan><tspan font-family="STKaiti, KaiTi, serif" font-size="39">工作流程</tspan></text>
+
+  <g stroke="#6f92b5" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Context and memory feed the tool-use step and receive updated results. -->
+    <path d="M648 277 Q836 271 1028 278 L1030 372 Q838 376 649 372Z" fill="#fcfcf9" fill-opacity=".22"/>
+    <g transform="translate(-85 0) rotate(-2 791 324)" stroke-width="2.35">
+      <path d="M761 300 Q783 291 811 301 Q817 304 810 309 Q787 319 761 309 Q755 306 761 300Z"/>
+      <path d="M758 306 L758 347 Q784 359 813 347 L813 305 M759 327 Q784 338 813 327"/>
+    </g>
+    <path d="M793 387 Q793 407 793 428 M786 418 L793 428 L800 418 M816 429 Q815 407 815 387 M809 398 L815 387 L822 399"/>
+
+    <!-- The five ink drawings echo the approved note: clear pen outlines, irregular by a fraction. -->
+    <g transform="rotate(-.8 316 521)" stroke-width="3.7">
+      <path d="M280 568 Q281 546 294 538 Q299 535 307 533 Q295 525 294 508 Q294 486 310 479 Q318 475 327 479 Q342 485 342 507 Q341 525 331 532 Q351 537 358 553 Q360 559 361 568"/>
+      <path d="M309 532 Q318 539 330 533" stroke-width="2.7" opacity=".58"/>
+    </g>
+
+    <!-- Planner: the reference's framed brain, with a delicate two-lobe pen contour. -->
+    <g transform="rotate(.5 520 520)">
+      <path d="M476 472 Q477 469 483 469 L558 469 Q564 470 564 476 L564 564 Q562 571 556 572 L483 572 Q476 570 476 564Z" stroke-width="3.6"/>
+      <g stroke-width="3.15">
+        <path d="M516 491 Q510 483 501 487 Q496 486 492 494 Q485 494 484 503 Q477 509 483 518 Q479 526 486 533 Q486 542 495 545 Q499 552 508 548 Q514 553 518 546 L518 492"/>
+        <path d="M520 492 Q525 484 533 487 Q540 485 544 494 Q552 495 552 504 Q560 511 554 520 Q559 529 550 536 Q549 545 541 545 Q535 551 527 547 Q522 551 520 545Z"/>
+        <path d="M497 497 Q504 494 507 501 Q504 508 510 512 M487 512 Q496 508 501 515 Q496 522 502 529 M509 535 Q503 539 508 546 M536 496 Q529 493 526 502 Q531 509 524 514 M550 514 Q541 509 536 516 Q542 523 536 532 M526 536 Q533 541 527 546" stroke-width="2.35"/>
+      </g>
+    </g>
+
+    <!-- Tool use: square note frame and interlocked wrench / driver. -->
+    <g transform="rotate(-.5 790 520)">
+      <path d="M746 473 Q746 469 752 469 L827 470 Q834 471 834 477 L834 564 Q834 571 827 572 L753 572 Q746 570 746 564Z" stroke-width="3.6"/>
+      <path d="M769 491 Q777 484 785 488 L778 497 L783 506 L792 508 L800 500 Q802 511 795 517 L814 539 Q820 546 814 552 Q808 557 803 550 L782 527 Q769 529 762 520 Q755 508 765 499" stroke-width="3.4"/>
+      <path d="M806 489 L815 499 L793 523 M806 490 L800 497 M786 527 L771 543 Q767 548 773 553 Q778 557 783 551 L798 535" stroke-width="3.2"/>
+      <circle cx="809" cy="545" r="2.1" fill="#6f92b5" stroke="none"/>
+    </g>
+
+    <!-- Execution: a framed gear with individually rounded teeth. -->
+    <g transform="rotate(.5 1040 521)">
+      <path d="M996 472 Q998 469 1004 469 L1076 470 Q1084 471 1084 477 L1084 564 Q1082 571 1076 572 L1004 572 Q996 571 996 564Z" stroke-width="3.6"/>
+      <path d="M1035 490 L1046 490 L1048 499 Q1054 501 1057 504 L1066 501 L1072 511 L1065 517 Q1066 524 1063 529 L1069 536 L1061 545 L1053 541 Q1048 545 1044 545 L1041 553 L1030 551 L1030 543 Q1024 541 1021 537 L1013 540 L1008 530 L1015 525 Q1013 519 1016 514 L1010 507 L1018 498 L1025 502 Q1029 499 1034 498Z" stroke-width="3.2"/>
+      <circle cx="1040" cy="521" r="15" stroke-width="3"/>
+      <circle cx="1040" cy="521" r="5.5" stroke-width="2.7"/>
+    </g>
+
+    <!-- Result: single sheet with folded corner and fine ruling. -->
+    <g transform="rotate(-.5 1264 521)">
+      <path d="M1239 477 Q1240 474 1245 474 L1271 474 L1290 494 L1290 565 Q1289 570 1284 570 L1244 570 Q1239 570 1239 565Z" stroke-width="3.45"/>
+      <path d="M1271 475 L1271 493 L1290 494 M1250 511 L1278 510 M1250 523 L1279 522 M1250 535 L1277 534 M1250 547 L1270 546" stroke-width="2.65"/>
+    </g>
+
+    <!-- Main sequence, with short airy arrows between every icon. -->
+    <path d="M375 521 Q403 518 431 521 M420 514 L431 521 L420 527"/>
+    <path d="M588 520 Q619 517 651 520 M640 513 L651 520 L639 526"/>
+    <path d="M861 521 Q892 517 926 521 M914 513 L926 521 L914 527"/>
+    <path d="M1100 521 Q1130 518 1162 520 M1151 512 L1162 520 L1151 527"/>
+
+    <!-- A feedback cycle from the result toward the next goal. -->
+    <path d="M1272 655 Q1270 723 1179 738 Q1053 761 953 744" stroke-width="2.5" stroke-dasharray="9 11 13 9 7 12"/>
+    <path d="M631 744 Q490 762 367 734 Q315 720 315 655" stroke-width="2.5" stroke-dasharray="9 12 13 8 7 11"/>
+    <path d="M1265 669 L1272 655 L1278 670 M308 668 L315 655 L323 668"/>
+  </g>
+
+  <g fill="#40566b" font-family="STKaiti, KaiTi, serif" font-weight="400" text-anchor="middle">
+    <text x="318" y="615" font-size="35" transform="rotate(-1 318 615)">用户目标</text>
+    <text x="520" y="615" font-size="35" transform="rotate(.7 520 615)">规划与推理</text>
+    <text x="790" y="615" font-size="35" transform="rotate(-.7 790 615)">工具使用</text>
+    <text x="1041" y="615" font-size="35" transform="rotate(1 1041 615)">执行与行动</text>
+    <text x="1263" y="615" font-size="35" transform="rotate(-.8 1263 615)">结果输出</text>
+    <text x="888" y="320" font-size="33" transform="rotate(-.5 888 320)">记忆与上下文</text>
+    <text x="788" y="742" font-size="32" transform="rotate(-.5 788 742)">观察 / 反馈 / 反思</text>
+  </g>
+  <g fill="#566e82" font-family="Caveat, cursive" font-size="34" text-anchor="middle">
+    <text x="318" y="648" transform="rotate(-1 318 648)">User Goal</text>
+    <text x="520" y="648" transform="rotate(.7 520 648)">Planner</text>
+    <text x="790" y="648" transform="rotate(-1 790 648)">Tool Use</text>
+    <text x="1041" y="648" transform="rotate(1 1041 648)">Execution</text>
+    <text x="1263" y="648" transform="rotate(-1 1263 648)">Result</text>
+    <text x="888" y="353" font-size="31" transform="rotate(.5 888 353)">Memory / Context</text>
+    <text x="788" y="777" transform="rotate(.5 788 777)">Observe / Reflect</text>
+  </g>
+
+  <!-- The right memo uses the same two fine handwriting colors as Voice Agent. -->
+  <g fill="#777873" font-family="'Nothing You Could Do', Caveat, cursive" font-weight="400">
+    <text x="1411" y="286" font-size="50" transform="rotate(-6 1411 286)">Plan</text>
+    <text x="1420" y="346" font-size="47" transform="rotate(2 1420 346)">Act</text>
+    <text x="1405" y="408" font-size="49" transform="rotate(-5 1405 408)">Observe</text>
+    <text x="1417" y="471" font-size="47" transform="rotate(2 1417 471)">Reflect</text>
+  </g>
+  <path d="M1405 497 Q1470 512 1567 493" stroke="#777873" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+  <g fill="#627f9b" font-family="'Nothing You Could Do', Caveat, cursive" font-weight="400">
+    <text x="1412" y="562" font-size="45" transform="rotate(-6 1412 562)">Tools</text>
+    <text x="1424" y="620" font-size="43" transform="rotate(1 1424 620)">Memory</text>
+    <text x="1407" y="678" font-size="43" transform="rotate(-5 1407 678)">Multi-Agent</text>
+    <text x="1410" y="738" font-size="38" transform="rotate(-6 1410 738)">Real-world Tasks</text>
+  </g>
+</svg>

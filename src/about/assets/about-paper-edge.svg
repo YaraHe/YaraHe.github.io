@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
+  <defs>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".11 .27" numOctaves="3" seed="8" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".12"/></feComponentTransfer></filter>
+    <filter id="edge-shadow" x="-5%" y="-35%" width="110%" height="145%"><feGaussianBlur stdDeviation="6"/></filter>
+    <clipPath id="paper"><path d="M0 24 17 28 29 25 42 30 56 27 73 31 88 30 101 34 118 31 137 36 154 38 170 36 189 44 206 43 222 47 240 48 258 54 278 57 292 63 314 69 329 75 350 81 367 90 388 94 402 101 421 104 437 112 453 116 470 119 482 126 500 126 512 132 533 129 546 135 565 133 580 137 602 132 620 135 639 130 655 132 676 127 694 130 709 123 728 126 747 120 766 121 783 118 803 120 824 114 843 112 859 108 881 107 896 102 918 101 936 96 953 91 973 87 990 82 1008 77 1028 69 1045 64 1061 58 1079 53 1095 46 1113 43 1129 38 1145 34 1163 30 1181 27 1197 25 1212 22 1232 23 1250 20 1267 24 1286 21 1301 24 1320 21 1339 25 1357 22 1374 25 1391 22 1407 27 1425 23 1440 26V160H0Z"/></clipPath>
+  </defs>
+  <path d="M0 24 C200 34 295 70 465 120 C590 150 815 120 990 86 C1164 29 1304 15 1440 26V160H0Z" fill="#a89f90" opacity=".09" filter="url(#edge-shadow)"/>
+  <g clip-path="url(#paper)"><rect width="1440" height="160" fill="#f0ece4" opacity=".78"/><rect width="1440" height="160" fill="#9e9587" filter="url(#grain)" opacity=".36"/><path d="M0 34 C240 53 292 87 470 132 C704 169 949 93 1130 45 C1280 18 1380 37 1440 29" fill="none" stroke="#fff" stroke-opacity=".38" stroke-width="5"/></g>
+</svg>

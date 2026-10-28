@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1864 843" fill="none">
+  <!-- Paper, tape, and clip are in the separate raster layer. All writing remains crisp vector ink. -->
+  <g fill="#405871" font-weight="400">
+    <text x="306" y="216" transform="rotate(-12 306 216)"><tspan font-family="Caveat, cursive" font-size="61">RAG </tspan><tspan font-family="STKaiti, KaiTi, serif" font-size="47">工作流程</tspan></text>
+  </g>
+
+  <g stroke="#87a4ba" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A title underline is enough to separate the note from the diagram. -->
+    <path d="M270 261 Q681 258 1147 222" stroke-width="2.2" stroke-dasharray="13 9 17 7 8 12" opacity=".6"/>
+
+    <!-- 01: document ingestion. Four icons retain the existing technical order. -->
+    <g transform="rotate(-2 455 392)">
+      <path d="M418 345 Q418 342 422 342 L468 339 L494 362 L495 432 Q494 437 489 437 L422 440 Q419 439 419 435Z" fill="#fcfcf9" fill-opacity=".2"/>
+      <path d="M468 341 L468 363 Q481 364 493 362 M432 373 Q448 371 470 373 M433 388 Q457 387 476 389 M432 403 Q455 402 474 403 M433 418 Q445 419 462 417" stroke-width="2.65"/>
+    </g>
+    <g transform="rotate(-1.2 710 382)">
+      <path d="M661 331 Q662 327 667 327 L728 325 L729 411 Q698 414 663 415Z" fill="#fcfcf9" fill-opacity=".37" stroke-width="3.3"/>
+      <path d="M674 345 L714 344 M674 356 L708 355 M674 368 L714 368 M674 380 L701 379 M674 392 L708 391" stroke-width="2.5"/>
+      <path d="M694 344 Q695 340 700 340 L753 339 L766 351 L767 423 Q736 425 696 427Z" fill="#fcfcf9" fill-opacity=".84" stroke-width="3.4"/>
+      <path d="M753 340 L753 352 L766 351 M708 360 L744 359 M708 372 L750 371 M709 384 L742 384 M709 396 L751 395 M709 408 L732 407" stroke-width="2.55"/>
+    </g>
+    <g transform="rotate(-2 1008 353)" stroke-width="3.4">
+      <path d="M968 348 L1013 298 L1010 354 L1050 375 M968 348 L984 394 L1010 354 L1050 375 M984 394 L1052 401"/>
+      <circle cx="968" cy="348" r="9" fill="#fcfcf9"/><circle cx="1013" cy="298" r="9" fill="#fcfcf9"/><circle cx="1010" cy="354" r="10" fill="#fcfcf9"/><circle cx="1050" cy="375" r="9" fill="#fcfcf9"/><circle cx="984" cy="394" r="9" fill="#fcfcf9"/><circle cx="1052" cy="401" r="9" fill="#fcfcf9"/>
+    </g>
+    <g transform="rotate(1 1291 354)">
+      <path d="M1248 324 Q1289 307 1334 325 L1334 405 Q1291 424 1249 406Z" fill="#fcfcf9" fill-opacity=".23"/>
+      <path d="M1248 325 Q1290 346 1334 325 M1248 351 Q1290 372 1334 351 M1249 381 Q1290 400 1334 381" stroke-width="2.65"/>
+    </g>
+    <path d="M545 382 Q573 377 612 381 M600 374 L612 381 L600 388 M820 379 Q850 373 891 377 M879 370 L891 377 L879 384 M1108 363 Q1137 358 1180 359 M1168 352 L1180 359 L1169 366"/>
+
+    <!-- The database feeds retrieval, while the question also goes into the grounded prompt. -->
+    <path d="M1295 439 Q1212 510 1057 510 Q844 512 694 547 Q637 558 622 596" stroke-width="3" stroke-dasharray="10 12 16 10 7 11"/>
+    <path d="M611 584 L622 596 L628 582"/>
+
+    <!-- 02: question, retrieval, retrieved evidence, augmented prompt, answer. -->
+    <g transform="translate(0 -22)">
+    <g transform="rotate(-1.8 393 681)">
+      <path d="M357 639 Q357 635 362 635 L404 633 L427 654 L429 717 Q427 723 423 723 L362 725 Q358 724 358 718Z" fill="#fcfcf9" fill-opacity=".2"/>
+      <path d="M405 634 L405 655 L428 653"/>
+      <path d="M378 661 Q382 647 393 648 Q408 650 406 663 Q404 671 393 678 Q388 682 390 690 M390 705 L390 706" stroke-width="3.1"/>
+    </g>
+    <g transform="rotate(2 629 675)">
+      <path d="M652 643 Q634 625 611 636 Q588 647 591 672 Q594 697 620 699 Q646 700 654 677 Q661 655 643 642Z"/>
+      <path d="M645 690 Q659 706 678 724 M604 657 Q609 646 624 646" stroke-width="2.65"/>
+    </g>
+    <g transform="rotate(-1 886 669)" stroke-width="3.1">
+      <path d="M811 625 Q842 622 903 621 L905 680 Q868 683 813 683Z" fill="#fcfcf9" fill-opacity=".45"/>
+      <path d="M823 637 L881 636 M823 649 L881 648 M823 661 L868 661" stroke-width="2.45"/>
+      <path d="M832 635 Q863 633 919 633 L922 695 Q882 698 835 697Z" fill="#fcfcf9" fill-opacity=".72"/>
+      <path d="M846 650 L902 649 M846 662 L908 661 M846 674 L895 674" stroke-width="2.45"/>
+      <path d="M852 648 Q884 646 932 647 L947 661 L948 709 Q907 713 855 711Z" fill="#fcfcf9" fill-opacity=".94"/>
+      <path d="M932 648 L932 661 L947 660 M868 666 L923 665 M868 679 L929 678 M868 692 L917 691" stroke-width="2.55"/>
+    </g>
+    <g transform="rotate(-2 1152 666)">
+      <path d="M1090 623 Q1149 619 1213 622 L1214 702 Q1163 705 1091 707Z" fill="#fcfcf9" fill-opacity=".2"/>
+      <path d="M1106 641 L1126 640 L1126 651 L1106 652Z M1140 639 L1196 638 M1140 653 L1193 652 M1107 669 L1197 668 M1107 681 L1172 681" stroke-width="2.5"/>
+    </g>
+    <g transform="rotate(1.4 1419 655)">
+      <path d="M1371 606 Q1404 603 1450 605 L1451 690 Q1418 694 1372 695Z" fill="#fcfcf9" fill-opacity=".2"/>
+      <path d="M1387 627 L1426 626 M1387 641 L1420 640 M1388 656 L1404 655" stroke-width="2.55"/>
+      <circle cx="1447" cy="674" r="22" fill="#fcfcf9" fill-opacity=".48"/>
+      <path d="M1438 673 L1445 681 L1458 665" stroke-width="2.7"/>
+    </g>
+    <path d="M472 675 Q495 671 535 674 M523 667 L535 674 L523 681 M697 671 Q727 668 759 669 M748 662 L759 669 L748 676 M969 660 Q1000 656 1037 659 M1025 651 L1037 659 L1025 665 M1253 651 Q1283 647 1317 648 M1305 641 L1317 648 L1305 655"/>
+    </g>
+  </g>
+
+  <!-- Subtle, independently tilted calligraphy matches the approved Voice Agent diagram. -->
+  <g fill="#40566b" font-family="STKaiti, KaiTi, serif" font-weight="400" text-anchor="middle">
+    <text x="455" y="497" font-size="37" transform="rotate(-1 455 497)">文档管理</text>
+    <text x="713" y="481" font-size="36" transform="rotate(.7 713 481)">解析与分块</text>
+    <text x="1005" y="455" font-size="36" transform="rotate(-1.2 1005 455)">向量化</text>
+    <text x="1290" y="461" font-size="35" transform="rotate(.6 1290 461)">向量数据库</text>
+    <text x="393" y="758" font-size="36" transform="rotate(-1 393 758)">用户问题</text>
+    <text x="632" y="749" font-size="36" transform="rotate(.6 632 749)">检索</text>
+    <text x="886" y="748" font-size="34" transform="rotate(-.7 886 748)">相关文档片段</text>
+    <text x="1152" y="729" font-size="35" transform="rotate(.8 1152 729)">增强提示</text>
+    <text x="1416" y="724" font-size="35" transform="rotate(-.8 1416 724)">生成回答</text>
+  </g>
+  <g fill="#405871" font-family="STKaiti, KaiTi, serif" font-size="40" font-weight="400">
+    <text x="273" y="328" transform="rotate(-3 273 328)">01 文档入库</text>
+    <text x="277" y="585" transform="rotate(-2 277 585)">02 提问检索</text>
+  </g>
+
+  <!-- Graphite for the reading list, softer blue-gray for the closing handwritten note. -->
+  <g fill="#777873" font-family="'Nothing You Could Do', Caveat, cursive" font-weight="400">
+    <text x="1570" y="269" font-size="48" transform="rotate(-5 1570 269)">Retrieval</text>
+    <text x="1581" y="337" font-size="46" transform="rotate(1 1581 337)">Embedding</text>
+    <text x="1568" y="405" font-size="48" transform="rotate(-4 1568 405)">Reranking</text>
+    <text x="1578" y="472" font-size="46" transform="rotate(2 1578 472)">Evaluation</text>
+    <text x="1572" y="539" font-size="46" transform="rotate(-3 1572 539)">Production</text>
+  </g>
+  <g fill="#627f9b" font-family="'Nothing You Could Do', Caveat, cursive" font-weight="400">
+    <text x="1550" y="625" font-size="49" transform="rotate(-7 1550 625)">From</text>
+    <text x="1559" y="667" font-size="43" transform="rotate(-5 1559 667)">Documents</text>
+    <text x="1562" y="709" font-size="44" transform="rotate(-7 1562 709)">to Better</text>
+    <text x="1565" y="751" font-size="43" transform="rotate(-6 1565 751)">Answers.</text>
+    <path d="M1591 769 Q1685 742 1794 746" stroke="#627f9b" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

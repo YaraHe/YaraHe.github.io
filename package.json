@@ -1,0 +1,14 @@
+{
+  "name": "yarahe-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "marked": "16.4.2",
+    "postcss": "8.5.6"
+  }
+}

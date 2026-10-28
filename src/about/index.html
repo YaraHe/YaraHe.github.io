@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="何扬雯的个人介绍与联系方式。">
+  <title>About Me — 何扬雯</title>
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="about.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="全站导航" data-aria-zh="全站导航" data-aria-en="Site navigation">
+    <a href="../index.html">Home</a>
+    <a href="../built/index.html">What I Built</a>
+    <a href="../understand/index.html">What I Understand</a>
+    <a href="index.html" aria-current="page">About Me</a>
+  </nav>
+
+  <main class="about-page">
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-switch-lang="zh-CN" aria-pressed="true" aria-label="中文">中</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-switch-lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
+
+    <div class="about-content">
+      <p class="about-eyebrow">ABOUT ME</p>
+      <h1 class="about-heading">
+        <span class="hello-wrap"><span class="hello-script">Hello,</span><svg class="hello-underline" viewBox="0 0 260 37" aria-hidden="true"><path d="M8 29 C65 16 142 2 210 9 C237 11 257 18 247 24"/></svg></span>
+        <span data-lang="zh-CN">我是何扬雯。</span>
+        <span data-lang="en" hidden>I'm Yara He.</span>
+      </h1>
+
+      <div class="about-copy" data-lang="zh-CN">
+        <p>原本与语言、文字打交道，<br>后来慢慢走近了 AI 的世界。</p>
+        <p>从学习、实习到动手做自己的小产品，<br>一路上有很多新的发现，也有不少反复尝试。</p>
+        <p>比起停留在想法里，<br>我更喜欢看看它真正发生时是什么样子。</p>
+      </div>
+      <div class="about-copy about-copy-en" data-lang="en" hidden>
+        <p>I used to work with language and words.<br>Then, little by little, I moved closer to the world of AI.</p>
+        <p>From learning and internships to making small products of my own,<br>I made many new discoveries, with plenty of trial and error along the way.</p>
+        <p>Rather than leaving ideas as ideas,<br>I like seeing how they take shape in practice.</p>
+      </div>
+
+      <div class="about-links" aria-label="简历与联系入口" data-aria-zh="简历与联系入口" data-aria-en="Resume and contact links">
+        {{RESUME_ENTRY}}
+        <a class="about-link" href="mailto:heyangwen499@163.com" aria-label="发送邮件至 heyangwen499@163.com" data-aria-zh="发送邮件至 heyangwen499@163.com" data-aria-en="Email heyangwen499@163.com">
+          <svg class="about-link-icon" viewBox="0 0 36 36" aria-hidden="true"><rect x="2.7" y="7" width="30.6" height="22" rx="1.8"/><path d="m4 8 14 11L32 8"/></svg>
+          <span class="about-link-text"><strong>Email <span aria-hidden="true">↗</span></strong><small>heyangwen499@163.com</small></span>
+        </a>
+        <a class="about-link" href="https://github.com/YaraHe" target="_blank" rel="noopener noreferrer" aria-label="YaraHe 的 GitHub 个人主页" data-aria-zh="YaraHe 的 GitHub 个人主页" data-aria-en="YaraHe's GitHub profile">
+          <svg class="about-link-icon about-github-icon" viewBox="0 0 36 36" aria-hidden="true"><path d="M18 2.5C9.4 2.5 2.5 9.5 2.5 18.1c0 6.9 4.5 12.7 10.8 14.8.8.1 1-.3 1-.7v-2.7c-4.4 1-5.3-1.9-5.3-1.9-.7-1.8-1.8-2.3-1.8-2.3-1.4-1 .1-1 .1-1 1.6.1 2.5 1.6 2.5 1.6 1.4 2.4 3.7 1.7 4.6 1.3.1-1 .5-1.7.9-2.1-3.5-.4-7.2-1.7-7.2-7.7 0-1.7.6-3.1 1.6-4.2-.2-.4-.7-2 .2-4.1 0 0 1.3-.4 4.3 1.6a15 15 0 0 1 7.8 0c3-2 4.3-1.6 4.3-1.6.9 2.1.3 3.7.2 4.1 1 1.1 1.6 2.5 1.6 4.2 0 6-3.7 7.3-7.3 7.7.5.5 1 1.5 1 3v4.6c0 .4.3.8 1 .7a15.6 15.6 0 0 0 10.7-14.8C33.5 9.5 26.6 2.5 18 2.5Z"/></svg>
+          <span class="about-link-text"><strong>GitHub <span aria-hidden="true">↗</span></strong><small data-lang="zh-CN">代码与笔记</small><small data-lang="en" hidden>My code &amp; notes</small></span>
+        </a>
+      </div>
+    </div>
+
+    <svg class="about-gold-curve" viewBox="0 0 800 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 143 C115 127 207 56 299 44 C338 37 351 37 356 61 C356 73 354 83 380 84 C486 97 619 32 800 18"/></svg>
+    <div class="about-exploring" aria-hidden="true"><span>Still exploring...</span><svg viewBox="0 0 220 39"><path d="M8 34 C58 17 132 4 211 9"/></svg></div>
+  </main>
+</body>
+</html>

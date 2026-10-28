@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="onda-español：从真实遇到的一句话出发，慢慢听见并练习西语的语速、语调与起伏。">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="demo.js" defer></script>
+  <title>onda-español｜项目概览</title>
+</head>
+<body>
+  <div class="page">
+    <header class="page-head" aria-label="项目导航">
+      <span>What I Built</span>
+      <span>01 / Overview</span>
+    </header>
+
+    <main class="overview">
+      <section class="demo-module" data-demo aria-label="onda-español 产品演示">
+        <div class="demo-frame">
+          <div class="demo-screen">
+            <video class="demo-video" src="assets/onda-espanol-demo-native-crop-candidate.mp4" preload="metadata" playsinline aria-label="真实产品操作录屏：从选句、理解、跟读、反馈复练到听熟"></video>
+            <button class="demo-cover" type="button" aria-label="播放产品演示视频：¿Dónde está la biblioteca?，时长 2 分 22 秒">
+              <img class="demo-cover-scene" src="assets/q1-demo-cover-plate.png" alt="" aria-hidden="true">
+              <svg class="demo-cover-annotations" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <g class="demo-notebook-ink" transform="rotate(-9 300 540)">
+                  <text x="210" y="488">¿Dónde está</text>
+                  <text x="243" y="596">la biblioteca?</text>
+                  <path class="demo-ink-rose" d="M216 510 Q275 521 318 508 M362 510 Q425 523 474 507"/>
+                  <path class="demo-ink-blue" d="M253 617 Q298 629 342 612 M410 617 Q506 631 610 607"/>
+                  <path class="demo-ink-gold" d="M224 413 q20 -17 43 -8 m13 3 12 -12 M653 625 l20 -10 -4 20"/>
+                </g>
+                <g class="demo-analysis-ink">
+                  <text class="demo-analysis-sentence" x="1010" y="389">¿Dónde está la biblioteca?</text>
+                  <path class="demo-analysis-guide" d="M1020 561 H1558 M1020 645 H1558"/>
+                  <!-- Trace of the user-provided curve reference; no pitch values are inferred. -->
+                  <g transform="translate(893 370) scale(.67 .75)">
+                    <polyline class="demo-intonation-line" points="205,323 213,326 221,332 229,321 237,284 245,244 253,228 261,222 269,220 277,218 285,216 293,216 301,214 309,211 317,206 325,202 333,194 341,184 349,176 357,176 365,175 373,174 381,174 389,174 397,174 405,178 413,184 421,192 429,202 437,219 445,242 453,258 461,266 469,268 477,270 485,271 493,271 501,271 509,272 517,274 525,277 533,278 541,278 549,278 557,279 565,279 573,280 581,281 589,284 597,289 605,295 613,298 621,300 629,304 637,314 645,326 653,336 661,344 669,347 677,350 685,354 693,357 701,358 709,358 717,358 725,360 733,363 741,366 749,364 757,358 765,352 773,352 781,353 789,353 797,353 805,353 813,354 821,355 829,350 837,334 845,322 853,318 861,311 869,299 877,285 885,272 893,260 901,250 909,244 917,238 925,230 933,220 941,210 949,208 957,194 965,180 973,195 981,211 989,216 997,216"/>
+                  </g>
+                  <text class="demo-analysis-word" x="1034" y="715">Dónde</text>
+                  <text class="demo-analysis-word" x="1177" y="715">está</text>
+                  <text class="demo-analysis-word" x="1300" y="715">la</text>
+                  <text class="demo-analysis-word" x="1406" y="715">biblioteca</text>
+                  <circle class="demo-analysis-mark" cx="1066" cy="730" r="4"/><circle class="demo-analysis-mark" cx="1207" cy="730" r="4"/><circle class="demo-analysis-mark" cx="1470" cy="730" r="4"/>
+                </g>
+              </svg>
+              <span class="demo-play" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m12 8 13 8-13 8z"/></svg></span>
+            </button>
+          </div>
+        </div>
+        <p class="demo-status" role="status" hidden></p>
+        <div class="demo-footer">
+          <div class="demo-project"><span>PROJECT</span><strong>onda-español</strong></div>
+          <ol class="demo-chapters" aria-label="视频章节">
+            <li><button type="button" data-start="0" aria-label="从 0 分 00 秒播放：选句"><span class="demo-chapter-text"><span>01</span>选句</span><span class="demo-chapter-track"></span></button></li>
+            <li><button type="button" data-start="13" aria-label="从 0 分 13 秒播放：句子讲解"><span class="demo-chapter-text"><span>02</span>讲解</span><span class="demo-chapter-track"></span></button></li>
+            <li><button type="button" data-start="23" aria-label="从 0 分 23 秒播放：跟读练习"><span class="demo-chapter-text"><span>03</span>跟读</span><span class="demo-chapter-track"></span></button></li>
+            <li><button type="button" data-start="40" aria-label="从 0 分 40 秒播放：反馈与复练"><span class="demo-chapter-text"><span>04</span>反馈复练</span><span class="demo-chapter-track"></span></button></li>
+            <li><button type="button" data-start="100" aria-label="从 1 分 40 秒播放：听熟巩固"><span class="demo-chapter-text"><span>05</span>听熟</span><span class="demo-chapter-track"></span></button></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="story" aria-labelledby="story-title">
+        <p class="story-index">ONDA ESPAÑOL / LANGUAGE LEARNING</p>
+        <h1 id="story-title">一句西语，<br>不止读一遍。</h1>
+        <div class="story-problem">
+          <p>认识每一个词，未必听得懂一句话。</p>
+          <p>读得出每一个音，未必读得出它的起伏。</p>
+        </div>
+        <p class="story-thesis">语言不只有字词，还有声音的节奏。</p>
+        <p class="story-response">从一句真实的西语开始，理解、聆听、模仿，到反馈与反复听熟，慢慢拥有自然的语感。</p>
+        <p class="story-close">让西语的起伏，从耳边走向唇齿之间。</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

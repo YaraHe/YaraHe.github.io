@@ -1,0 +1,31 @@
+node_modules/
+dist/
+Review/
+.env
+.env.*
+!.env.example
+*.log
+playwright-report/
+test-results/
+.cache/
+tmp/
+*.tmp
+*.bak
+
+# Keep Q1 exploration assets and older recordings locally.
+# Only the approved cover and video are published.
+src/built/q1/assets/*
+!src/built/q1/assets/q1-demo-cover-plate.png
+!src/built/q1/assets/onda-espanol-demo-native-crop-candidate.mp4
+
+# Superseded visual assets; retained locally for reference.
+src/built/q2/assets/real-practice-480.jpg
+src/built/q2/assets/real-practice-mobile.jpg
+src/built/q2/assets/real-score-curve-480.jpg
+src/built/q2/assets/real-score-record-mobile.jpg
+src/understand/assets/rag-flow-final.png
+src/understand/assets/rag-flow-hd.png
+src/understand/assets/rag-flow.svg
+src/understand/assets/rag-paper-background-v2.png
+src/understand/assets/rag-paper-background.png
+src/understand/assets/voice-paper-collage.png
