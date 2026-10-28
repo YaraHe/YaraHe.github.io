@@ -119,7 +119,7 @@
   text-decoration: none;
 }
 .about-link + .about-link { border-left: 1px solid #deded8; padding-left: 27px; }
-.about-link:not(.about-link-unavailable):hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.about-link[href]:hover strong { text-decoration: underline; text-underline-offset: 4px; }
 .about-link:focus-visible { outline: 2px solid #688fb0; outline-offset: 4px; }
 .about-link-unavailable { cursor: default; }
 .about-link-icon { width: 32px; height: 32px; flex: none; fill: none; stroke: #294b68; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -128,6 +128,16 @@
 .about-link-text strong { color: #2c4b68; font: 600 15px/1.15 Georgia, "STSong", serif; white-space: nowrap; }
 .about-link-text strong span { margin-left: 8px; font-weight: 400; }
 .about-link-text small { color: #718ba1; font: 12px/1.3 Georgia, "STSong", serif; white-space: nowrap; }
+.about-email .about-link-text { flex: 1; }
+.about-email-heading { display: flex; align-items: center; gap: 2px; }
+.about-email-copy { min-width: 44px; min-height: 44px; margin: -13px -8px -13px 0; padding: 0 8px; border: 0; background: none; color: #607e98; font: 12px/1.1 "STSong", Georgia, serif; cursor: pointer; }
+.about-email-copy > span { border-bottom: 1px solid #aab9c5; padding-bottom: 2px; }
+.about-email-copy:hover { color: #2c4b68; }
+.about-email-copy:hover > span { border-bottom-color: currentColor; }
+.about-email-copy:focus-visible { outline: 2px solid #688fb0; outline-offset: 3px; }
+.about-email-address { user-select: text; }
+.about-email-feedback { color: #607e98; font: 11px/1.35 "STSong", Georgia, serif; }
+.about-email-feedback:empty { display: none; }
 .about-link-unavailable small { color: #8e999d; }
 .about-gold-curve { position: absolute; z-index: 0; right: -2.5%; bottom: 46px; width: 65%; height: 112px; overflow: visible; }
 .about-gold-curve path { fill: none; stroke: #c9a982; stroke-width: 1.45; stroke-linecap: round; }

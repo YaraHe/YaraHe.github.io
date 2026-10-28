@@ -45,10 +45,17 @@
 
       <div class="about-links" aria-label="简历与联系入口" data-aria-zh="简历与联系入口" data-aria-en="Resume and contact links">
         {{RESUME_ENTRY}}
-        <a class="about-link" href="mailto:heyangwen499@163.com" aria-label="发送邮件至 heyangwen499@163.com" data-aria-zh="发送邮件至 heyangwen499@163.com" data-aria-en="Email heyangwen499@163.com">
+        <div class="about-link about-email">
           <svg class="about-link-icon" viewBox="0 0 36 36" aria-hidden="true"><rect x="2.7" y="7" width="30.6" height="22" rx="1.8"/><path d="m4 8 14 11L32 8"/></svg>
-          <span class="about-link-text"><strong>Email <span aria-hidden="true">↗</span></strong><small>heyangwen499@163.com</small></span>
-        </a>
+          <span class="about-link-text">
+            <span class="about-email-heading">
+              <strong>Email</strong>
+              <button class="about-email-copy" type="button" aria-label="复制邮箱地址" data-aria-zh="复制邮箱地址" data-aria-en="Copy email address"><span data-lang="zh-CN">复制</span><span data-lang="en" hidden>Copy</span></button>
+            </span>
+            <small class="about-email-address" id="about-email-address">heyangwen499@163.com</small>
+            <span class="about-email-feedback" id="about-email-feedback" role="status" aria-live="polite"></span>
+          </span>
+        </div>
         <a class="about-link" href="https://github.com/YaraHe" target="_blank" rel="noopener noreferrer" aria-label="YaraHe 的 GitHub 个人主页" data-aria-zh="YaraHe 的 GitHub 个人主页" data-aria-en="YaraHe's GitHub profile">
           <svg class="about-link-icon about-github-icon" viewBox="0 0 36 36" aria-hidden="true"><path d="M18 2.5C9.4 2.5 2.5 9.5 2.5 18.1c0 6.9 4.5 12.7 10.8 14.8.8.1 1-.3 1-.7v-2.7c-4.4 1-5.3-1.9-5.3-1.9-.7-1.8-1.8-2.3-1.8-2.3-1.4-1 .1-1 .1-1 1.6.1 2.5 1.6 2.5 1.6 1.4 2.4 3.7 1.7 4.6 1.3.1-1 .5-1.7.9-2.1-3.5-.4-7.2-1.7-7.2-7.7 0-1.7.6-3.1 1.6-4.2-.2-.4-.7-2 .2-4.1 0 0 1.3-.4 4.3 1.6a15 15 0 0 1 7.8 0c3-2 4.3-1.6 4.3-1.6.9 2.1.3 3.7.2 4.1 1 1.1 1.6 2.5 1.6 4.2 0 6-3.7 7.3-7.3 7.7.5.5 1 1.5 1 3v4.6c0 .4.3.8 1 .7a15.6 15.6 0 0 0 10.7-14.8C33.5 9.5 26.6 2.5 18 2.5Z"/></svg>
           <span class="about-link-text"><strong>GitHub <span aria-hidden="true">↗</span></strong><small data-lang="zh-CN">代码与笔记</small><small data-lang="en" hidden>My code &amp; notes</small></span>

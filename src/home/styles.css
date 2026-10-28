@@ -214,22 +214,6 @@ body { background: var(--paper); color: var(--ink); }
   transition: color .18s ease;
 }
 
-.resume-shortcut {
-  display: inline-block;
-  margin-top: 1px;
-  padding: 4px 2px 3px 0;
-  border-bottom: 1px solid rgba(61, 59, 54, .38);
-  color: var(--muted);
-  font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.35;
-  text-decoration: none;
-  transition: color .18s ease, border-color .18s ease;
-}
-
-.resume-shortcut:hover { color: var(--ink); border-bottom-color: var(--ink); }
-.resume-shortcut:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-
 .entry-name {
   width: fit-content;
   font-size: clamp(17px, 1.32vw, 21px);
