@@ -6,11 +6,14 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'd
 const index = JSON.parse(fs.readFileSync(path.join(root, 'understand', 'article-index.json'), 'utf8'));
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const htmlPath = value => value.split('/').map(encodeURIComponent).join('/');
-const expected = { RAG: 16, 'Agent AI': 12, 'Voice Agent': 3 };
-if (index.articles.length !== 31) throw new Error(`Expected 31 articles, found ${index.articles.length}`);
-if (new Set(index.articles.map(item => item.id)).size !== 31) throw new Error('Duplicate article IDs');
-for (const [category, count] of Object.entries(expected)) {
-  if (index.articles.filter(item => item.category === category).length !== count) throw new Error(`Wrong ${category} count`);
+const categories = ['RAG', 'Agent AI', 'Voice Agent'];
+if (!index.articles.length) throw new Error('No published articles found');
+if (new Set(index.articles.map(item => item.id)).size !== index.articles.length) throw new Error('Duplicate article IDs');
+for (const article of index.articles) {
+  if (!categories.includes(article.category)) throw new Error(`Unexpected article category: ${article.category}`);
+}
+for (const category of categories) {
+  if (!index.articles.some(item => item.category === category)) throw new Error(`No published articles in ${category}`);
 }
 let checkedLinks = 0;
 let imageCount = 0;
@@ -35,6 +38,9 @@ function visit(directory) {
 }
 visit(root);
 const readerDir = path.join(root, 'understand', 'articles');
+const indexedIds = new Set(index.articles.map(item => item.id));
+const readerIds = fs.readdirSync(readerDir).filter(name => name.endsWith('.html')).map(name => name.slice(0, -5));
+if (readerIds.length !== indexedIds.size || readerIds.some(id => !indexedIds.has(id))) throw new Error('Reader files do not match the published article index');
 for (const article of index.articles) {
   const reader = fs.readFileSync(path.join(readerDir, `${article.id}.html`), 'utf8');
   const visibleTags = reader.match(/<div class="reader-tags">([\s\S]*?)<\/div>/)?.[1];
@@ -45,5 +51,5 @@ for (const article of index.articles) {
   if (sourceLink?.[1] !== escapeHtml(sourceUrl)) errors.push(`Wrong GitHub source link in ${article.id}`);
 }
 if (errors.length) throw new Error(`Broken or unsafe links:\n${errors.join('\n')}`);
-if (fs.readdirSync(readerDir).filter(name => name.endsWith('.html')).length !== 31) throw new Error('Reader count mismatch');
-console.log(`Verified 31 readers, source links and complete tags; ${checkedLinks} local links, ${imageCount} image references, 16/12/3 categories.`);
+const categorySummary = categories.map(category => `${category}: ${index.articles.filter(item => item.category === category).length}`).join(', ');
+console.log(`Verified ${index.articles.length} readers, source links and complete tags; ${checkedLinks} local links, ${imageCount} image references, ${categorySummary}.`);

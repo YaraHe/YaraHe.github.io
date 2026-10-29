@@ -30,7 +30,10 @@ function frontmatter(raw, sourcePath) {
     const value = match[1].trim();
     return value.startsWith('"') ? JSON.parse(value) : value;
   });
-  return { body: raw.slice(match[0].length), title: scalar('title'), description: scalar('description'), category: scalar('category'), subcategory: scalar('subcategory'), type: scalar('type'), status: scalar('status'), tags };
+  const publishLine = block.match(/^publish:\s*(.*)$/m);
+  const publishValue = publishLine?.[1].trim();
+  if (publishLine && !['true', 'false'].includes(publishValue)) throw new Error(`Invalid publish value in ${sourcePath}; expected true or false.`);
+  return { body: raw.slice(match[0].length), title: scalar('title'), description: scalar('description'), category: scalar('category'), subcategory: scalar('subcategory'), type: scalar('type'), status: scalar('status'), tags, publish: publishValue !== 'false' };
 }
 
 const chapters = [
@@ -78,9 +81,9 @@ const articles = sourceFiles.map(relativePath => {
     category: chapter.label, sourceCategory: metadata.category, subcategory: metadata.subcategory,
     tags: metadata.tags, readingTime, readingTimeEstimated: true,
     sourcePath, sourceRelativePath: relativePath, sourceSha256: crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex'),
-    status: metadata.status, publicReady: false, type: metadata.type, body: metadata.body,
+    status: metadata.status, publicReady: false, type: metadata.type, publish: metadata.publish, body: metadata.body,
   };
-});
+}).filter(article => article.publish);
 
 // The four visible Agent AI entries sample different directions; the full set retains every source article.
 const featuredAgentIds = [
@@ -301,7 +304,7 @@ for (const article of articles) {
   fs.writeFileSync(path.join(here, 'articles', `${article.id}.html`), document(article.title, reader, 2));
 }
 
-const index = articles.map(({ body, sourcePath, ...article }) => article);
+const index = articles.map(({ body, sourcePath, publish, ...article }) => article);
 const assetRecords = [...copiedAssets].sort().map(file => `${path.relative(here, file).replaceAll('\\', '/')}:${crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')}`);
 const contentDigest = crypto.createHash('sha256').update([...index.map(article => `${article.sourceRelativePath}:${article.sourceSha256}`), ...assetRecords].join('\n')).digest('hex');
 let contentCommit = null, contentDirty = null;
