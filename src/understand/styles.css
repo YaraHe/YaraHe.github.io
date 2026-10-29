@@ -84,6 +84,9 @@ a { color: inherit; }
 .reader-deck { max-width: 36em; margin-top: 36px; color: #555a55; font: 20px/1.7 var(--serif-cn); }
 .reader-tags { display: flex; flex-wrap: wrap; gap: 9px 21px; margin-top: 26px; color: var(--quiet); font: 14px/1.5 var(--serif-en); }
 .reader-tags span + span::before { content: "/"; margin-right: 21px; color: #a6aaa3; }
+.reader-head > .reader-source { margin: 21px 0 0; color: var(--quiet); font: 13px/1.5 var(--serif-cn); }
+.reader-source a { text-decoration: underline; text-decoration-color: #adb7b1; text-underline-offset: 4px; }
+.reader-source a:hover, .reader-source a:focus-visible { color: var(--ink); }
 .prose { max-width: 760px; margin: 75px auto 130px; font: 18px/1.95 var(--serif-cn); overflow-wrap: break-word; }
 .prose h2, .prose h3, .prose h4 { font-weight: 400; letter-spacing: -.035em; line-height: 1.45; }
 .prose h2 { margin: 76px 0 24px; font-size: 31px; }
