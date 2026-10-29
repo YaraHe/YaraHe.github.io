@@ -2,6 +2,11 @@ name: Deploy portfolio to GitHub Pages
 
 on:
   workflow_dispatch:
+    inputs:
+      content_commit:
+        description: D repository commit SHA (blank uses latest main)
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -21,12 +26,21 @@ jobs:
           persist-credentials: false
 
       - name: Checkout learning notes
+        id: content
         uses: actions/checkout@v7
         with:
           repository: YaraHe/basic_learn
-          ref: main
+          ref: ${{ inputs.content_commit || 'main' }}
           path: basic_learn
           persist-credentials: false
+
+      - name: Record source revisions
+        working-directory: YaraHe.github.io
+        env:
+          CONTENT_COMMIT: ${{ steps.content.outputs.commit }}
+        run: |
+          echo "Website commit: $(git rev-parse HEAD)"
+          echo "Learning notes commit: $CONTENT_COMMIT"
 
       - name: Set up Node.js
         uses: actions/setup-node@v7
@@ -41,6 +55,27 @@ jobs:
           npm ci
           npm run build
           npm run check
+
+      - name: Verify learning notes revision
+        working-directory: YaraHe.github.io
+        env:
+          REQUESTED_CONTENT_COMMIT: ${{ inputs.content_commit }}
+          CHECKED_OUT_CONTENT_COMMIT: ${{ steps.content.outputs.commit }}
+        run: |
+          INDEX_CONTENT_COMMIT=$(node -p "require('./dist/understand/article-index.json').contentCommit")
+          echo "Requested learning notes commit: ${REQUESTED_CONTENT_COMMIT:-<latest main>}"
+          echo "Checked out learning notes commit: $CHECKED_OUT_CONTENT_COMMIT"
+          echo "Build index learning notes commit: $INDEX_CONTENT_COMMIT"
+
+          if [ "$CHECKED_OUT_CONTENT_COMMIT" != "$INDEX_CONTENT_COMMIT" ]; then
+            echo "The build index contentCommit does not match the checked out learning notes commit."
+            exit 1
+          fi
+
+          if [ -n "$REQUESTED_CONTENT_COMMIT" ] && [ "$REQUESTED_CONTENT_COMMIT" != "$CHECKED_OUT_CONTENT_COMMIT" ]; then
+            echo "The checked out learning notes commit does not match the requested commit."
+            exit 1
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
